@@ -13,15 +13,34 @@
            
             function showUserName() {
         document.getElementById('displayName').innerHTML = 
-                    document.getElementById("user_name").value;
+                    document.getElementById("user_name").value + '<br>' + '<input id="subname" type="text" Placeholder="Enter your subname ">'+ '<br>' + '<button type="button" class="btn btn-primary" onclick="showSubName()">Submit</button>' + "<br>" + "<br>"  + "<span class='glyphicon glyphicon-user'>" + "</span>" + "SubName: ";
     }; 
             function showUserSurname() {
         document.getElementById('displaySurname').innerHTML = 
-                    document.getElementById("user_surname").value;
+                    document.getElementById("user_surname").value + '<br>' + '<input id="subsurname" type="text" Placeholder="Enter your subsurname">'+ '<br>' + '<button type="button" class="btn btn-primary" onclick="showSubSur()">Submit</button>' + "<br>" + "<br>" + "<span class='glyphicon glyphicon-user'>" + "</span>" + "Subsurame: ";
     };
             function showUserCity() {
         document.getElementById('displayCity').innerHTML = 
-                    document.getElementById("user_city").value;
+                    document.getElementById("user_city").value + '<br>' + '<input id="subcity" type="text" Placeholder="Enter your subcity">'+ '<br>' + '<button type="button" class="btn btn-primary" onclick="showSubCity()">Submit</button>' + "<br>" + "<br>" + "<span class='glyphicon glyphicon glyphicon-home'>" + "</span>" + "SubCity: ";
+    };
+    
+    function showSubName() {
+        document.getElementById('displaySubName').innerHTML = document.getElementById("subname").value + '<br>' + '<input id="subsubname" type="text" Placeholder="Enter your SubSubname ">'+ '<br>' + '<button type="button" class="btn btn-primary" onclick="showSubSubName()">Submit</button>' + "<br>" + "<br>" + "<th>" + "<span class='glyphicon glyphicon-user'>" + "</span>" + "SubSubName: " + "</th>";
+    };
+    function showSubSur() {
+        document.getElementById('displaySubSurname').innerHTML = document.getElementById("subsurname").value + '<br>' + '<input id="subsubsur" type="text" Placeholder="Enter your SubSubSurname ">'+ '<br>' + '<button type="button" class="btn btn-primary" onclick="showSubSubSurName()">Submit</button>' + "<br>" + "<br>" + "<th>" + "<span class='glyphicon glyphicon-user'>" + "</span>" + "SubSubsurName: " + "</th>";
+    };
+    function showSubCity() {
+        document.getElementById('displaySubCity').innerHTML = document.getElementById("subcity").value + '<br>' + '<input id="subsubcity" type="text" Placeholder="Enter your SubSubCity ">'+ '<br>' + '<button type="button" class="btn btn-primary" onclick="showSubSubCity()">Submit</button>' + "<br>" + "<br>" + "<th>" + "<span class='glyphicon glyphicon glyphicon-home'>" + "</span>" + "SubSubCity: " + "</th>";
+    };
+    function showSubSubName() {
+        document.getElementById('displaySubSubName').innerHTML = document.getElementById("subsubname").value;
+    };
+    function showSubSubSurName() {
+        document.getElementById('displaySubSubSurname').innerHTML = document.getElementById("subsubsur").value;
+    };
+    function showSubSubCity() {
+        document.getElementById('displaySubSubCity').innerHTML = document.getElementById("subsubcity").value;
     };
     
             
@@ -30,15 +49,15 @@
         <div id="container" class="col-xs-6 col-xs-offset-3 ">
             <div class="row">
                 <h2>Enter your data to our Database:</h2>
-                <input class="form-control" type="text" name="search" id="user_name" placeholder="Enter Your Name">
+                <input class="form-control" type="text" id="user_name" placeholder="Enter Your Name">
 
                 <br>
                 
-                <input class="form-control" type="text" name="search" id="user_surname" placeholder="Enter Your Last Name">
+                <input class="form-control" type="text" id="user_surname" placeholder="Enter Your Last Name">
                 
                 <br>
                 
-                <input class="form-control" type="text" name="search" id="user_city" placeholder="Enter Your City">
+                <input class="form-control" type="text" id="user_city" placeholder="Enter Your City">
 
                 <br>
                 
@@ -58,17 +77,28 @@
                     <table class="table">
                         <thead class="thead">
                               <tr>
-                                <th><span class="glyphicon glyphicon-user"></span>Firstname</th>
-                                <th><span class="glyphicon glyphicon-user"></span>Lastname</th>
-                                <th><span class="glyphicon glyphicon glyphicon-home"></span>City</th>
+                                <th><span class="glyphicon glyphicon-user"></span>Firstname:</th>
+                                <th><span class="glyphicon glyphicon-user"></span>Lastname:</th>
+                                <th><span class="glyphicon glyphicon glyphicon-home"></span>City:</th>
                               </tr>
                             </thead>
                             <tbody>
-                              <tr>
-                                <td><p><span id='displayName'></p></td>
-                                <td><p><span id='displaySurname'></p></td>
-                                <td><p><span id='displayCity'></p></td>
+                                <tr>
+                                    <td><p><span id='displayName'></p></td>
+                                    <td><p><span id='displaySurname'></p></td>
+                                    <td><p><span id='displayCity'></p></td>
                                 </tr>
+                                <tr>
+                                    <td><p><span id='displaySubName'></p></td>
+                                    <td><p><span id='displaySubSurname'></p></td>
+                                    <td><p><span id='displaySubCity'></p></td>
+                                </tr>
+                                <tr>
+                                    <td><p><span id='displaySubSubName'></p></td>
+                                    <td><p><span id='displaySubSubSurname'></p></td>
+                                    <td><p><span id='displaySubSubCity'></p></td>
+                                </tr>
+                            
                             </tbody>
                           </table>
                 </div>
