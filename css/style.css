@@ -1,0 +1,10 @@
+body{
+    background-color:#e6e6ff !important;
+}
+
+.thead {
+    background-color: lightgrey;
+}
+td {
+    font-size: 20px;
+}

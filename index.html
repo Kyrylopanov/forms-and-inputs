@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    </head>
+    
+    <body>
+        <script>
+           
+            function showUserName() {
+        document.getElementById('displayName').innerHTML = 
+                    document.getElementById("user_name").value;
+    }; 
+            function showUserSurname() {
+        document.getElementById('displaySurname').innerHTML = 
+                    document.getElementById("user_surname").value;
+    };
+            function showUserCity() {
+        document.getElementById('displayCity').innerHTML = 
+                    document.getElementById("user_city").value;
+    };
+    
+            
+        </script>
+        
+        <div id="container" class="col-xs-6 col-xs-offset-3 ">
+            <div class="row">
+                <h2>Enter your data to our Database:</h2>
+                <input class="form-control" type="text" name="search" id="user_name" placeholder="Enter Your Name">
+
+                <br>
+                
+                <input class="form-control" type="text" name="search" id="user_surname" placeholder="Enter Your Last Name">
+                
+                <br>
+                
+                <input class="form-control" type="text" name="search" id="user_city" placeholder="Enter Your City">
+
+                <br>
+                
+                <div id="map"></div>
+                
+                <input type="submit" class="btn btn-primary" value="Submit" onclick="showUserName()+showUserSurname()+showUserCity();">
+                
+                <br>
+                <br>
+            </div>
+            
+           
+            
+            <div class="row">
+                
+                <div>
+                    <table class="table">
+                        <thead class="thead">
+                              <tr>
+                                <th><span class="glyphicon glyphicon-user"></span>Firstname</th>
+                                <th><span class="glyphicon glyphicon-user"></span>Lastname</th>
+                                <th><span class="glyphicon glyphicon glyphicon-home"></span>City</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><p><span id='displayName'></p></td>
+                                <td><p><span id='displaySurname'></p></td>
+                                <td><p><span id='displayCity'></p></td>
+                                </tr>
+                            </tbody>
+                          </table>
+                </div>
+            
+            </div>
+        
+        
+    </body>
+    
+</html>
