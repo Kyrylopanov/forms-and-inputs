@@ -5,6 +5,11 @@ body{
 .thead {
     background-color: lightgrey;
 }
+
 td {
     font-size: 20px;
+}
+
+#subname, #subsurname, #subcity, #subsubname, #subsubsur, #subsubcity {
+    width: 190px;
 }
